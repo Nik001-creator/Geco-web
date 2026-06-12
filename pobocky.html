@@ -2,22 +2,13 @@
 <html lang="cs">
 <head>
 <meta charset="UTF-8">
-<title>Mapa GECO</title>
+<title>Pobočky GECO</title>
+
 <link rel="stylesheet" href="https://api.mapy.cz/v1/mapy-js/css/mapy-js.css">
 <script src="https://api.mapy.cz/v1/mapy-js/mapy-js.js"></script>
-<style>
-#mapa { width: 100%; height: 500px; }
-</style>
+
+<link rel="stylesheet" href="global.css">
 </head>
 <body>
-<div id="mapa"></div>
-<script>
-var mapa = new Mapy.Map(document.getElementById("mapa"), {
-center: { lat: 49.81, lng: 15.47 },
-zoom: 7
-});
-mapa.addLayer(new Mapy.Layer.Base());
-mapa.addControl(new Mapy.Control.Zoom());
-</script>
-</body>
-</html>
+
+<div id="mapa" style="width: 100
