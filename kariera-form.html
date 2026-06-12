@@ -1,0 +1,41 @@
+<style>
+.job-application-form {
+max-width: 600px;
+background: #fdfdfd;
+padding: 30px;
+border: 1px solid #e0e0e0;
+margin-top: 20px;
+}
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+.form-group input, .form-group textarea {
+width: 100%; padding: 10px; border: 1px solid #ccc; box-sizing: border-box;
+}
+.submit-btn {
+background: #333; color: #fff; padding: 12px 20px; border: none; cursor: pointer;
+width: 100%; font-weight: bold;
+}
+</style>
+
+<div class="job-application-form">
+<h3>Podat žádost o spolupráci</h3>
+<form action="/odeslat-zivotopis" method="POST" enctype="multipart/form-data">
+<div class="form-group">
+<label>Jméno a příjmení</label>
+<input type="text" name="name" required>
+</div>
+<div class="form-group">
+<label>Telefon</label>
+<input type="tel" name="phone" required>
+</div>
+<div class="form-group">
+<label>Životopis (PDF)</label>
+<input type="file" name="cv" accept=".pdf" required>
+</div>
+<div class="form-group">
+<label>Stručná motivace</label>
+<textarea name="message" rows="4"></textarea>
+</div>
+<button type="submit" class="submit-btn">Odeslat k posouzení</button>
+</form>
+</div>

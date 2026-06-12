@@ -1,0 +1,607 @@
+/* Globální reset a základní nastavení */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+background-color: #f8f9fa;
+color: #212529;
+line-height: 1.6;
+}
+
+/* Horní lišta pro Zákaznickou a B2B zónu */
+.top-bar {
+background-color: #1a1a1a;
+color: #fff;
+font-size: 0.8rem;
+padding: 8px 0;
+border-bottom: 1px solid #333;
+}
+
+.top-bar-container {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 20px;
+}
+
+.zone-label {
+color: #868e96;
+font-weight: bold;
+margin-right: 10px;
+}
+
+.b2b-label {
+color: #cc0000;
+}
+
+.customer-zone .link-top {
+color: #e0e0e0;
+text-decoration: none;
+margin-right: 15px;
+transition: color 0.2s;
+}
+
+.customer-zone .link-top:hover {
+color: #fff;
+text-decoration: underline;
+}
+
+.b2b-actions {
+display: flex;
+align-items: center;
+}
+
+.b2b-actions a {
+color: #fff;
+text-decoration: none;
+margin-left: 15px;
+padding: 4px 10px;
+border-radius: 4px;
+font-size: 0.8rem;
+transition: all 0.2s ease;
+}
+
+.btn-top-login {
+background-color: #cc0000;
+font-weight: bold;
+}
+
+.btn-top-login:hover {
+background-color: #b30000;
+}
+
+.btn-top-reg {
+border: 1px solid #6c757d;
+color: #ced4da !important;
+}
+
+.btn-top-reg:hover {
+background-color: #fff;
+color: #1a1a1a !important;
+border-color: #fff;
+}
+
+/* Hlavní navigace a hlavička */
+header {
+background-color: #ffffff;
+box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.nav-container {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 20px;
+}
+
+.logo {
+font-size: 1.8rem;
+font-weight: 900;
+color: #cc0000;
+letter-spacing: 1px;
+}
+logo a {
+color: #cc0000;
+text-decoration: none;
+}
+
+.logo a:hover {
+color: #b30000;
+}
+
+header ul {
+display: flex;
+list-style: none;
+}
+
+header ul li {
+margin-left: 25px;
+}
+
+header ul li a {
+text-decoration: none;
+color: #495057;
+font-weight: 600;
+font-size: 1rem;
+transition: color 0.2s ease;
+}
+
+header ul li a:hover {
+color: #cc0000;
+}
+
+/* Hlavní obsah */
+main {
+max-width: 1200px;
+margin: 40px auto;
+padding: 0 20px;
+}
+
+/* Hero sekce */
+.hero-enterprise {
+background: linear-gradient(135deg, #2b2d42 0%, #1a1a2e 100%);
+color: #fff;
+padding: 60px 40px;
+border-radius: 8px;
+margin-bottom: 40px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.hero-enterprise h1 {
+font-size: 2.5rem;
+margin-bottom: 15px;
+font-weight: 700;
+}
+
+.hero-enterprise p {
+font-size: 1.2rem;
+margin-bottom: 30px;
+max-width: 800px;
+color: #e0e0e0;
+}
+
+.hero-buttons .btn-main {
+background-color: #cc0000;
+color: #fff;
+padding: 12px 25px;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;
+margin-right: 15px;
+display: inline-block;
+transition: background-color 0.2s ease;
+}
+
+.hero-buttons .btn-main:hover {
+background-color: #b30000;
+}
+
+.hero-buttons .btn-secondary {
+background-color: transparent;
+color: #fff;
+padding: 12px 25px;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;
+border: 2px solid #fff;
+display: inline-block;
+transition: all 0.2s ease;
+}
+
+.hero-buttons .btn-secondary:hover {
+background-color: #fff;
+color: #1a1a2e;
+}
+
+/* Stránky obecně - nadpisy sekcí */
+.home-sections h2 {
+font-size: 1.8rem;
+margin-bottom: 25px;
+color: #1a1a1a;
+border-left: 5px solid #cc0000;
+padding-left: 15px;
+}
+
+/* Mřížka pro sortiment */
+.grid-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+margin-bottom: 40px;
+}
+
+.card-enterprise {
+background-color: #ffffff;
+padding: 25px;
+border-radius: 6px;
+border: 1px solid #e9ecef;
+box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-enterprise:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+}
+
+.card-enterprise h3 {
+font-size: 1.25rem;
+color: #cc0000;
+margin-bottom: 12px;
+}
+
+.card-enterprise p {
+font-size: 0.95rem;
+color: #6c757d;
+}
+
+/* B2B Výzva k registraci */
+.b2b-register-lead {
+background-color: #ffffff;
+padding: 40px;
+border-radius: 8px;
+border: 1px solid #e9ecef;
+box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+margin-bottom: 40px;
+}
+
+.lead-content h2 {
+font-size: 1.8rem;
+color: #1a1a1a;
+margin-bottom: 15px;
+}
+
+.lead-content p {
+font-size: 1.1rem;
+color: #495057;
+margin-bottom: 25px;
+max-width: 900px;
+}
+
+.lead-content .btn-main {
+background-color: #cc0000;
+color: #fff;
+padding: 12px 25px;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;
+display: inline-block;
+transition: background-color 0.2s ease;
+}
+
+.lead-content .btn-main:hover {
+background-color: #b30000;
+}
+
+/* Patička */
+footer {
+background-color: #1a1a1a;
+color: #868e96;
+text-align: center;
+padding: 25px 20px;
+font-size: 0.9rem;
+border-top: 3px solid #cc0000;
+}
+
+/* Responzivita pro mobilní zařízení */
+@media (max-width: 768px) {
+.top-bar-container {
+flex-direction: column;
+gap: 10px;
+text-align: center;
+}
+
+.b2b-actions a {
+margin: 0 10px;
+}
+
+.nav-container {
+flex-direction: column;
+gap: 15px;
+}
+
+header ul {
+width: 100%;
+justify-content: space-around;
+}
+
+header ul li {
+margin-left: 0;
+}
+
+.hero-enterprise {
+padding: 40px 20px;
+}
+
+.hero-enterprise h1 {
+font-size: 1.8rem;
+}
+
+.hero-buttons .btn-main {
+margin-bottom: 15px;
+width: 100%;
+text-align: center;
+}
+
+.hero-buttons .btn-secondary {
+width: 100%;
+text-align: center;
+}
+}
+/* Styly pro stránku Sortiment / Katalog */
+.page-header {
+text-align: center;
+margin-bottom: 40px;
+}
+
+.page-header h1 {
+font-size: 2.5rem;
+color: #1a1a1a;
+margin-bottom: 10px;
+}
+
+.subtitle {
+font-size: 1.1rem;
+color: #6c757d;
+}
+
+.catalog-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+gap: 30px;
+margin-bottom: 50px;
+}
+
+.catalog-item {
+background-color: #ffffff;
+border-radius: 8px;
+border: 1px solid #e9ecef;
+box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+overflow: hidden;
+}
+
+.catalog-body {
+padding: 30px;
+}
+
+.catalog-body h3 {
+font-size: 1.5rem;
+color: #1a1a1a;
+margin-bottom: 15px;
+border-bottom: 2px solid #e9ecef;
+padding-bottom: 10px;
+}
+
+/* První dvě karty upravené pro zvýraznění hlavního byznysu */
+.catalog-item:nth-child(1) .catalog-body,
+.catalog-item:nth-child(2) .catalog-body {
+padding-top: 20px;
+}
+
+.catalog-header-box {
+background-color: #cc0000;
+color: #fff;
+padding: 12px 30px;
+font-size: 1.3rem;
+font-weight: bold;
+}
+
+.catalog-body p {
+color: #495057;
+margin-bottom: 15px;
+font-style: italic;
+}
+
+.catalog-body ul {
+list-style-type: none;
+margin-bottom: 20px;
+}
+
+.catalog-body ul li {
+padding: 6px 0;
+border-bottom: 1px dashed #f1f3f5;
+color: #212529;
+font-size: 0.95rem;
+}
+
+.catalog-body ul li::before {
+content: "✓ ";
+color: #cc0000;
+font-weight: bold;
+margin-right: 5px;
+}
+
+.lock-notice {
+display: block;
+background-color: #f8f9fa;
+color: #6c757d;
+text-align: center;
+padding: 10px;
+border-radius: 4px;
+font-size: 0.85rem;
+border: 1px solid #e9ecef;
+font-weight: 600;
+}
+
+/* CTA blok pod katalogem */
+.catalog-cta {
+background: #1a1a1a;
+color: #fff;
+padding: 40px;
+border-radius: 8px;
+text-align: center;
+}
+
+.catalog-cta h2 {
+font-size: 2rem;
+margin-bottom: 15px;
+}
+
+.catalog-cta p {
+max-width: 800px;
+margin: 0 auto 25px auto;
+color: #ced4da;
+font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+.catalog-grid {
+grid-template-columns: 1fr;
+}
+}
+/* Styly pro novou B2B sekci */
+.b2b-services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+gap: 30px;
+margin-bottom: 50px;
+}
+
+.b2b-service-card {
+background-color: #ffffff;
+padding: 30px;
+border-radius: 8px;
+border: 1px solid #e9ecef;
+border-top: 4px solid #cc0000;
+box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.b2b-service-card h2 {
+font-size: 1.4rem;
+color: #1a1a1a;
+margin-bottom: 15px;
+}
+
+.b2b-service-card p {
+color: #495057;
+font-size: 0.95rem;
+}
+
+/* Kroky pro onboarding partnerů */
+.onboarding-section {
+background-color: #ffffff;
+padding: 40px;
+border-radius: 8px;
+border: 1px solid #e9ecef;
+margin-bottom: 40px;
+}
+
+.onboarding-section h2 {
+font-size: 1.8rem;
+color: #1a1a1a;
+text-align: center;
+margin-bottom: 35px;
+}
+
+.steps-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 25px;
+}
+
+.step-box {
+text-align: center;
+position: relative;
+padding: 20px;
+}
+
+.step-num {
+width: 50px;
+height: 50px;
+background-color: #cc0000;
+color: #fff;
+font-size: 1.5rem;
+font-weight: bold;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 auto 15px auto;
+}
+
+.step-box h3 {
+font-size: 1.2rem;
+color: #1a1a1a;
+margin-bottom: 10px;
+}
+
+.step-box p {
+font-size: 0.9rem;
+color: #6c757d;
+}
+
+@media (max-width: 768px) {
+.b2b-services-grid {
+grid-template-columns: 1fr;
+}
+}
+/* Natvrdo fix pro logo jako odkaz */
+.logo a,
+.logo a:visited,
+.logo a:active,
+.logo a:focus {
+color: #cc0000 !important;
+text-decoration: none !important;
+border-bottom: none !important;
+}
+
+.logo a:hover {
+color: #b30000 !important;
+text-decoration: none !important;
+border-bottom: none !important;
+}
+cta-section {
+padding: 40px;
+background-color: #f9f9f9;
+text-align: center;
+border-radius: 8px;
+margin: 20px 0;
+}
+
+.btn-primary {
+display: inline-block;
+padding: 15px 30px;
+background-color: #cc0000; /* GECO červená */
+color: white;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;
+transition: background 0.3s;
+}
+
+.btn-primary:hover {
+background-color: #a30000; /* Tmavší odstín při najetí myší */
+}
+
+/* Nastavení celého pozadí stránky na čistě bílou */
+body {
+background-color: #ffffff;
+}
+
+/* Obal loga, aby splýval s bílým pozadím */
+.logo-header {
+background-color: #ffffff;
+text-align: left;
+padding: 20px 0;
+}
+
+/* Formulář s čistým bílým pozadím bez stínů, které by odhalily okraje */
+.form-container {
+max-width: 450px;
+margin: 40px auto;
+padding: 30px;
+background-color: #ffffff; /* Sladěno s pozadím */
+border: none; /* Odstranění rámečku */
+}
+

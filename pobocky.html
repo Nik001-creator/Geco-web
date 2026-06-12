@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GECO, a.s. - Logistická síť a prodejny</title>
+<link rel="stylesheet" href="global.css">
+<script src="https://api.mapy.cz/loader.js"></script>
+<script>Loader.load();</script>
+<body>
+
+<div class="top-bar">
+<div class="top-bar-container">
+<div class="customer-zone">
+<span class="zone-label">PRO ZÁKAZNÍKY:</span>
+<a href="klub.html" class="link-top">GECO Kartička / Věrnostní klub</a>
+<a href="reklamace.html" class="link-top">Zákaznické centrum (Podpora)</a>
+</div>
+<div class="b2b-actions">
+<span class="zone-label b2b-label">VELKOOBCHOD (IČO):</span>
+<a href="#login" class="btn-top-login">vstup do B2B portálu (SAP)</a>
+<a href="registrace.html" class="btn-top-reg">Registrace nové trafiky / prodejny</a>
+</div>
+</div>
+</div>
+
+<header>
+<nav>
+<div class="nav-container">
+<div class="logo">
+<a href="index.html"><img src="logo.png" alt="GECO" style="height: 70px; width: auto; display: block;"></a>
+</div>
+<ul>
+<li><a href="index.html">Domů</a></li>
+<li><a href="sortiment.html">Sortiment</a></li>
+<li><a href="b2b.html">B2B Služby</a></li>
+<li><a href="kariera.html">Kariéra</a></li>
+<li><a href="pobocky.html">Prodejny GECO</a></li>
+</ul>
+</div>
+</nav>
+</header>
+
+<main>
+<section class="page-header">
+<h1>Naše pobočky a logistická síť</h1>
+<p class="subtitle">Disponujeme silným zázemím. Naše klíčové uzly zajišťují plynulé zásobování po celé ČR.</p>
+</section>
+
+<section class="catalog-container">
+<h2 style="font-size: 1.8rem; margin-bottom: 25px; border-left: 5px solid #ccc; padding-left: 10px;">Naše pobočky</h2>
+<div class="grid-grid">
+<div class="card-enterprise"><h3>Centrála Klíčany</h3><p>Zásobování pro Střední Čechy a Prahu.</p></div>
+<div class="card-enterprise"><h3>Pobočka Brno</h3><p>Logistický uzel Šlapanice.</p></div>
+<div class="card-enterprise"><h3>Pobočka Ostrava</h3><p>Distribuce pro Slezsko.</p></div>
+<div class="card-enterprise"><h3>Pobočka Ústí nad Labem</h3><p>Severní Čechy.</p></div>
+<div class="card-enterprise"><h3>Pobočka Hradec Králové</h3><p>Východní Čechy.</p></div>
+<div class="card-enterprise"><h3>Pobočka Olomouc</h3><p>Střední Morava.</p></div>
+<div class="card-enterprise"><h3>Pobočka České Budějovice</h3><p>Jižní Čechy.</p></div>
+<div class="card-enterprise"><h3>Pobočka Plzeň</h3><p>Západní Čechy.</p></div>
+<div class="card-enterprise"><h3>Pobočka Karlovy Vary</h3><p>Karlovarský kraj.</p></div>
+</div>
+</section>
+
+<div id="mapa" style="width: 100%; height: 500px; border: 2px solid #ccc; margin: 40px 0; border-radius: 8px;"></div>
+</main>
+
+<footer>
+<p>&copy; 2026 GECO, a.s. Všechna práva vyhrazena.</p>
+</footer>
+
+<script>
+Loader.async(function() {
+var center = SMap.Coords.fromWGS84(15.47, 49.81);
+var m = new SMap(JAK.gel("mapa"), center, 7);
+m.addDefaultLayer(SMap.DEF_BASE).enable();
+m.addDefaultControls();
+
+var layer = new SMap.Layer.Marker();
+m.addLayer(layer);
+layer.enable();
+
+var pobocky = [
+{ name: "Klíčany", coords: [14.453, 50.181] },
+{ name: "Brno", coords: [16.608, 49.195] },
+{ name: "Ostrava", coords: [18.282, 49.821] }
+];
+
+pobocky.forEach(function(p) {
+var marker = new SMap.Marker(SMap.Coords.fromWGS84(p.coords[0], p.coords[1]), p.name);
+layer.addMarker(marker);
+});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>B2B Dashboard | GECO SAP</title>
+<style>
+.content-section { display: none; }
+.content-section.active { display: block; }
+</style>
+</head>
+<body style="font-family: 'Helvetica', sans-serif; background: #050505; color: #fff; margin: 0; display: flex; height: 100vh;">
+
+<!-- Boční menu -->
+<div style="width: 250px; background: #111; border-right: 1px solid #333; padding: 20px;">
+<h2 style="color: #cc0000; font-size: 1.2rem; margin-bottom: 40px;">GECO B2B SAP</h2>
+<nav style="display: flex; flex-direction: column; gap: 20px;">
+<a href="#" onclick="show('prehled')" style="color: #fff; text-decoration: none; font-weight: bold;">Přehled</a>
+<a href="#" onclick="show('objednavky')" style="color: #aaa; text-decoration: none;">Objednávky</a>
+<a href="#" onclick="show('faktury')" style="color: #aaa; text-decoration: none;">Faktury</a>
+<a href="#" onclick="show('logistika')" style="color: #aaa; text-decoration: none;">Logistika</a>
+<a href="index.html" style="color: #cc0000; text-decoration: none; margin-top: 50px; display: block;">Odhlásit</a>
+</nav>
+</div>
+
+<!-- Hlavní obsah -->
+<div style="flex-grow: 1; padding: 40px;">
+<div id="prehled" class="content-section active">
+<h1>Vítejte, Partnere</h1>
+<p>Aktuální přehled stavu účtu.</p>
+</div>
+<div id="objednavky" class="content-section">
+<h1>Správa objednávek</h1>
+<p>Seznam aktivních a historických objednávek.</p>
+</div>
+<div id="faktury" class="content-section">
+<h1>Faktury</h1>
+<p>Přehled všech vystavených faktur.</p>
+</div>
+<div id="logistika" class="content-section">
+<h1>Logistika</h1>
+<p>Sledování zásilek a závozů.</p>
+</div>
+</div>
+
+<script>
+function show(id) {
+document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+</script>
+</body>
+</html>
