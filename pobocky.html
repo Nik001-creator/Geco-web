@@ -5,10 +5,26 @@
 <title>Pobočky GECO</title>
 
 <link rel="stylesheet" href="https://api.mapy.cz/v1/mapy-js/css/mapy-js.css">
+
 <script src="https://api.mapy.cz/v1/mapy-js/mapy-js.js"></script>
 
 <link rel="stylesheet" href="global.css">
 </head>
 <body>
 
-<div id="mapa" style="width: 100
+<div id="mapa" style="width: 100%; height: 500px; border: 2px solid black;"></div>
+
+<script>
+// Inicializace mapy
+const center = { lat: 49.81, lng: 15.47 };
+const mapa = new Mapy.Map(document.getElementById("mapa"), {
+center: center,
+zoom: 7
+});
+
+mapa.addLayer(new Mapy.Layer.Base());
+mapa.addControl(new Mapy.Control.Zoom());
+</script>
+
+</body>
+</html>
